@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bengaluru House Price Estimator</title>
+  <link rel="stylesheet" href="app.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="header-tag">Bengaluru Real Estate</div>
+      <h1 class="hero-title">What's Your Home <em>Worth?</em></h1>
+      <p class="hero-sub">Enter property details below to get an instant price estimate powered by machine learning.</p>
+    </header>
+
+    <main class="card">
+      <form id="predict-form">
+
+        <!-- Square Footage -->
+        <div class="field">
+          <label for="sqft">Total Area <span class="unit">(sq ft)</span></label>
+          <div class="input-wrapper">
+            <input type="number" id="sqft" name="total_sqft" placeholder="e.g. 1200" min="100" required />
+            <span class="input-icon">&#9649;</span>
+          </div>
+        </div>
+
+        <!-- BHK & Bath Row -->
+        <div class="field-row">
+          <div class="field">
+            <label>BHK</label>
+            <div class="stepper" id="bhk-stepper">
+              <button type="button" class="step-btn" data-target="bhk" data-dir="-1">−</button>
+              <span class="step-val" id="bhk-val">2</span>
+              <button type="button" class="step-btn" data-target="bhk" data-dir="1">+</button>
+              <input type="hidden" name="bhk" id="bhk" value="2" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Bathrooms</label>
+            <div class="stepper" id="bath-stepper">
+              <button type="button" class="step-btn" data-target="bath" data-dir="-1">−</button>
+              <span class="step-val" id="bath-val">2</span>
+              <button type="button" class="step-btn" data-target="bath" data-dir="1">+</button>
+              <input type="hidden" name="bath" id="bath" value="2" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="field">
+          <label for="location-input">Location</label>
+          <div class="location-wrapper">
+            <input
+              type="text"
+              id="location-input"
+              placeholder="Type or select a location…"
+              autocomplete="off"
+            />
+            <input type="hidden" name="location" id="location-value" />
+            <ul class="dropdown" id="location-dropdown"></ul>
+          </div>
+          <p class="field-hint" id="location-hint"></p>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <span class="btn-text">Estimate Price</span>
+          <span class="btn-loader" hidden>Calculating…</span>
+        </button>
+      </form>
+
+      <!-- Result Panel -->
+      <div class="result-panel" id="result-panel" hidden>
+        <p class="result-label">Estimated Market Price</p>
+        <p class="result-price" id="result-price">—</p>
+        <p class="result-note">Values are indicative. Actual prices may vary based on market conditions.</p>
+        <button class="reset-btn" id="reset-btn">← Try Another</button>
+      </div>
+    </main>
+
+    <footer class="footer">Model trained on Bengaluru housing data · Prices in Indian Rupees (Lakhs)</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
