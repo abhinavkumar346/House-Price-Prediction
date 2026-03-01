@@ -5,7 +5,7 @@ A full-stack machine learning web application that predicts residential property
 ---
 
 ## 📸 Preview
-> ![App Screenshot](client/Screenshot 2026-03-01 190340.png)
+> ![App Screenshot](app_screenshot.png)
 > *Replace this placeholder with an actual screenshot of your running app.*
 
 ---
