@@ -1,5 +1,15 @@
 # 🏠 Bengaluru House Price Predictor
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=flat&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4.2-F7931E?style=flat&logo=scikit-learn&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.0.3-000000?style=flat&logo=flask&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-1.26.4-013243?style=flat&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2.2.2-150458?style=flat&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.8.4-11557C?style=flat&logo=matplotlib&logoColor=white)
+![ML](https://img.shields.io/badge/ML-Linear%20Regression-blueviolet?style=flat)
+![REST API](https://img.shields.io/badge/API-REST-orange?style=flat&logo=fastapi&logoColor=white)
+![Frontend](https://img.shields.io/badge/Frontend-Vanilla%20JS-F7DF1E?style=flat&logo=javascript&logoColor=black)
+
 A full-stack machine learning web application that predicts residential property prices in Bengaluru, India. Built with a **scikit-learn Linear Regression model**, a **Flask REST API**, and a clean vanilla HTML/CSS/JS frontend.
 
 ---
